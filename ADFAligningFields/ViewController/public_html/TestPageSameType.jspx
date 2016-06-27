@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="TestPage" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelFormLayout id="pfl1" rows="5">
+                    <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
+                                  required="#{bindings.FirstName.hints.mandatory}" 
+                                  columns="#{bindings.FirstName.hints.displayWidth}"
+                                  maximumLength="#{bindings.FirstName.hints.precision}"
+                                  shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.FirstName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
+                                  required="#{bindings.LastName.hints.mandatory}" 
+                                  columns="#{bindings.LastName.hints.displayWidth}"
+                                  maximumLength="#{bindings.LastName.hints.precision}"
+                                  shortDesc="#{bindings.LastName.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.LastName.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.Dob.inputValue}" label="#{bindings.Dob.hints.label}"
+                                  required="#{bindings.Dob.hints.mandatory}" 
+                                  columns="#{bindings.Dob.hints.displayWidth}" shortDesc="#{bindings.Dob.hints.tooltip}"
+                                  id="id1">
+                        <f:validator binding="#{bindings.Dob.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.Dob.format}"/> 
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.Sex.inputValue}" label="#{bindings.Sex.hints.label}"
+                                  required="#{bindings.Sex.hints.mandatory}"
+                                  columns="#{bindings.Sex.hints.displayWidth}" 
+                                  maximumLength="#{bindings.Sex.hints.precision}"
+                                  shortDesc="#{bindings.Sex.hints.tooltip}" id="it4">
+                        <f:validator binding="#{bindings.Sex.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Age.inputValue}" label="#{bindings.Age.hints.label}"
+                                  required="#{bindings.Age.hints.mandatory}" 
+                                  columns="#{bindings.Age.hints.displayWidth}"
+                                  maximumLength="#{bindings.Age.hints.precision}"
+                                  shortDesc="#{bindings.Age.hints.tooltip}" id="it3">
+                        <f:validator binding="#{bindings.Age.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.StreetNo.inputValue}" label="#{bindings.StreetNo.hints.label}"
+                                  required="#{bindings.StreetNo.hints.mandatory}"
+                                  columns="#{bindings.StreetNo.hints.displayWidth}" 
+                                  maximumLength="#{bindings.StreetNo.hints.precision}"
+                                  shortDesc="#{bindings.StreetNo.hints.tooltip}" id="it7">
+                        <f:validator binding="#{bindings.StreetNo.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.StreetName.inputValue}" label="#{bindings.StreetName.hints.label}"
+                                  required="#{bindings.StreetName.hints.mandatory}"
+                                  columns="#{bindings.StreetName.hints.displayWidth}" 
+                                  maximumLength="#{bindings.StreetName.hints.precision}"
+                                  shortDesc="#{bindings.StreetName.hints.tooltip}" id="it8">
+                        <f:validator binding="#{bindings.StreetName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                                  required="#{bindings.City.hints.mandatory}"
+                                  columns="#{bindings.City.hints.displayWidth}" 
+                                  maximumLength="#{bindings.City.hints.precision}"
+                                  shortDesc="#{bindings.City.hints.tooltip}" id="it5">
+                        <f:validator binding="#{bindings.City.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
+                                  required="#{bindings.Country.hints.mandatory}"
+                                  columns="#{bindings.Country.hints.displayWidth}" 
+                                  maximumLength="#{bindings.Country.hints.precision}"
+                                  shortDesc="#{bindings.Country.hints.tooltip}" id="it6">
+                        <f:validator binding="#{bindings.Country.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.Doj.inputValue}" label="#{bindings.Doj.hints.label}"
+                                  required="#{bindings.Doj.hints.mandatory}" 
+                                  columns="#{bindings.Doj.hints.displayWidth}" shortDesc="#{bindings.Doj.hints.tooltip}"
+                                  id="id2">
+                        <f:validator binding="#{bindings.Doj.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.Doj.format}"/>
+                    </af:inputDate>
+                    <f:facet name="footer">
+                        <af:panelGroupLayout layout="horizontal" id="pgl1">
+                            <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
+                                     id="b5"/>
+                            <af:button actionListener="#{bindings.First.execute}" text="First"
+                                      partialSubmit="true" id="b1"/>
+                            <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                                       partialSubmit="true" id="b2"/>
+                            <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                        partialSubmit="true" id="b3"/>
+                            <af:button actionListener="#{bindings.Last.execute}" text="Last"
+                                        partialSubmit="true" id="b4"/>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                </af:panelFormLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

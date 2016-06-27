@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpEO"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="EMPLOYEE"
+  AliasName="EmpEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="FirstName"
+    Precision="20"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.FirstName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    Precision="20"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.LastName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Dob"
+    ColumnName="DOB"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="NUMBER"
+    TableName="EMPLOYEE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Dob_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Dob_FMT_FORMATTER"/>
+        <LABEL
+          ResId="model.EmpEO.Dob_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Doj"
+    ColumnName="DOJ"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="NUMBER"
+    TableName="EMPLOYEE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Doj_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Doj_FMT_FORMATTER"/>
+        <LABEL
+          ResId="model.EmpEO.Doj_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Dsoa11g"
+    ColumnName="DSOA11G"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"
+    >
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Dsoa11g_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Dsoa11g_FMT_FORMAT"/>
+        <LABEL
+          ResId="model.EmpEO.Dsoa11g_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Dsoa12c"
+    ColumnName="DSOA12C"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"
+    >
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Dsoa12c_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Dsoa12c_FMT_FORMATTER"/>
+        <LABEL
+          ResId="model.EmpEO.Dsoa12c_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Dbpm11g"
+    ColumnName="DBPM11G"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"
+    >
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Dbpm11g_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Dbpm11g_FMT_FORMAT"/>
+        <LABEL
+          ResId="model.EmpEO.Dbpm11g_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Dbpm12c"
+    ColumnName="DBPM12C"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"
+    >
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="model.EmpEO.Dbpm12c_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="model.EmpEO.Dbpm12c_FMT_FORMATTER"/>
+        <LABEL
+          ResId="model.EmpEO.Dbpm12c_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Age"
+    Precision="20"
+    ColumnName="AGE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.Age_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Sex"
+    Precision="20"
+    ColumnName="SEX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.Sex_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="City"
+    Precision="20"
+    ColumnName="CITY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.City_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Country"
+    Precision="20"
+    ColumnName="COUNTRY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.Country_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="StreetNo"
+    Precision="20"
+    ColumnName="STREET_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.StreetNo_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="StreetName"
+    Precision="20"
+    ColumnName="STREET_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMPLOYEE"
+    >
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.EmpEO.StreetName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Key
+    Name="EmpeoPrimaryKey1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="EMPEO_PRIMARY_KEY1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmpEO.FirstName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmpeoPrimaryKey"
+    >
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="EMPEO_PRIMARY_KEY"/>
+      <Attr Name="_isForeign" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmpEO.FirstName"/>
+      <Item Value="model.EmpEO.Dsoa11g"/>
+      <Item Value="model.EmpEO.Dsoa12c"/>
+      <Item Value="model.EmpEO.Dbpm11g"/>
+      <Item Value="model.EmpEO.Dbpm12c"/>
+      <Item Value="model.EmpEO.Age"/>
+      <Item Value="model.EmpEO.Sex"/>
+      <Item Value="model.EmpEO.City"/>
+      <Item Value="model.EmpEO.Country"/>
+      <Item Value="model.EmpEO.StreetNo"/>
+      <Item Value="model.EmpEO.StreetName"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

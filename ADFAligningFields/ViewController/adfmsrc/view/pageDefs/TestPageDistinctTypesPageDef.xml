@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="TestPageDistinctTypesPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmpVO1" RangeSize="25" DataControl="AppModuleDataControl" id="EmpVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="EmpVO1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dob">
+      <AttrNames>
+        <Item Value="Dob"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_Sex" id="Sex" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmpVO1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_City" id="City" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Doj">
+      <AttrNames>
+        <Item Value="Doj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="StreetNo">
+      <AttrNames>
+        <Item Value="StreetNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dsoa11g">
+      <AttrNames>
+        <Item Value="Dsoa11g"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_Country" id="Country" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Age">
+      <AttrNames>
+        <Item Value="Age"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dsoa12c">
+      <AttrNames>
+        <Item Value="Dsoa12c"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_StreetName" id="StreetName" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dbpm11g">
+      <AttrNames>
+        <Item Value="Dbpm11g"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dbpm12c">
+      <AttrNames>
+        <Item Value="Dbpm12c"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="EmpVO1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

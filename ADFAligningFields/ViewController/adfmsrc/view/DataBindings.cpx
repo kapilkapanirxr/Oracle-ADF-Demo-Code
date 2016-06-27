@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/DistinctTypeFields.jspx" usageId="view_DistinctTypeFieldsPageDef"/>
+    <page path="/TestPageSameType.jspx" usageId="view_TestPagePageDef"/>
+    <page path="/TestPageDistinctTypes.jspx" usageId="view_TestPageDistinctTypesPageDef"/>
+    <page path="/FixPage.jspx" usageId="view_FixPagePageDef"/>
+    <page path="/TestPagePanelGridFix.jspx" usageId="view_FixPage2PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_DistinctTypeFieldsPageDef" path="view.pageDefs.DistinctTypeFieldsPageDef"/>
+    <page id="view_TestPagePageDef" path="view.pageDefs.TestPagePageDef"/>
+    <page id="view_TestPageDistinctTypesPageDef" path="view.pageDefs.TestPageDistinctTypesPageDef"/>
+    <page id="view_FixPagePageDef" path="view.pageDefs.FixPagePageDef"/>
+    <page id="view_FixPage2PageDef" path="view.pageDefs.FixPage2PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

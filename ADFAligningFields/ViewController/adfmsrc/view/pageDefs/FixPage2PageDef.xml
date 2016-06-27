@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="FixPage2PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmpVO1" RangeSize="25" DataControl="AppModuleDataControl" id="EmpVO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="EmpVO1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Dob">
+      <AttrNames>
+        <Item Value="Dob"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Sex">
+      <AttrNames>
+        <Item Value="Sex"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Age">
+      <AttrNames>
+        <Item Value="Age"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="StreetNo">
+      <AttrNames>
+        <Item Value="StreetNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="StreetName">
+      <AttrNames>
+        <Item Value="StreetName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmpVO1Iterator" id="Doj">
+      <AttrNames>
+        <Item Value="Doj"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_Sex" id="Sex1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_StreetName" id="StreetName1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_City" id="City1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="EmpVO1Iterator" StaticList="false" Uses="LOV_Country" id="Country1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

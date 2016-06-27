@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="FixPage2.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelGridLayout id="pgl1">
+                    <af:gridRow marginTop="5px" height="auto" id="gr1">
+                        <af:gridCell marginStart="5px" width="5%" id="gc1" halign="end">
+                            <af:outputLabel value="#{bindings.FirstName.hints.label}" id="ol1"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" id="gc2">
+                            <af:inputText value="#{bindings.FirstName.inputValue}" simple="true"
+                                          required="#{bindings.FirstName.hints.mandatory}"
+                                          columns="#{bindings.FirstName.hints.displayWidth}" disabled="true"
+                                          maximumLength="#{bindings.FirstName.hints.precision}"
+                                          shortDesc="#{bindings.FirstName.hints.tooltip}" id="it1">
+                                <f:validator binding="#{bindings.FirstName.validator}"/>
+                            </af:inputText>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="5%" id="gc3" halign="end">
+                            <af:outputLabel value="#{bindings.StreetNo.hints.label}" id="ol6"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc4">
+                            <af:inputText value="#{bindings.StreetNo.inputValue}" simple="true"
+                                          required="#{bindings.StreetNo.hints.mandatory}"
+                                          columns="#{bindings.StreetNo.hints.displayWidth}" disabled="true"
+                                          maximumLength="#{bindings.StreetNo.hints.precision}"
+                                          shortDesc="#{bindings.StreetNo.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.StreetNo.validator}"/>
+                            </af:inputText>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr2">
+                        <af:gridCell marginStart="5px" width="5%" id="gc5" halign="end">
+                            <af:outputLabel value="#{bindings.LastName.hints.label}" id="ol2"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" id="gc6">
+                            <af:inputText value="#{bindings.LastName.inputValue}" simple="true"
+                                          required="#{bindings.LastName.hints.mandatory}"
+                                          columns="#{bindings.LastName.hints.displayWidth}"
+                                          maximumLength="#{bindings.LastName.hints.precision}" disabled="true"
+                                          shortDesc="#{bindings.LastName.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.LastName.validator}"/>
+                            </af:inputText>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="5%" id="gc7" halign="end">
+                            <af:outputLabel value="#{bindings.StreetName.hints.label}" id="ol7"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc8">
+                            <af:selectOneChoice value="#{bindings.StreetName1.inputValue}"
+                                                label="#{bindings.StreetName1.label}" simple="true" disabled="true"
+                                                required="#{bindings.StreetName1.hints.mandatory}"
+                                                shortDesc="#{bindings.StreetName1.hints.tooltip}" id="soc2">
+                                <f:selectItems value="#{bindings.StreetName1.items}" id="si2"/>
+                                <f:validator binding="#{bindings.StreetName1.validator}"/>
+                            </af:selectOneChoice>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr3">
+                        <af:gridCell marginStart="5px" width="5%" id="gc9" halign="end">
+                            <af:outputLabel value="#{bindings.Dob.hints.label}" id="ol3"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" id="gc10">
+                            <af:inputDate value="#{bindings.Dob.inputValue}" required="#{bindings.Dob.hints.mandatory}"
+                                          columns="#{bindings.Dob.hints.displayWidth}"  simple="true" disabled="true"
+                                          shortDesc="#{bindings.Dob.hints.tooltip}" id="id1">
+                                <f:validator binding="#{bindings.Dob.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.Dob.format}"/>
+                            </af:inputDate>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="5%" id="gc11" halign="end">
+                            <af:outputLabel value="#{bindings.City.hints.label}" id="ol8"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc12">
+                            <af:selectOneChoice value="#{bindings.City1.inputValue}" label="#{bindings.City1.label}"
+                                                required="#{bindings.City1.hints.mandatory}" simple="true" disabled="true"
+                                                shortDesc="#{bindings.City1.hints.tooltip}" id="soc3">
+                                <f:selectItems value="#{bindings.City1.items}" id="si3"/>
+                                <f:validator binding="#{bindings.City1.validator}"/>
+                            </af:selectOneChoice>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                        <af:gridCell marginStart="5px" width="5%" id="gc13" halign="end">
+                            <af:outputLabel value="#{bindings.Sex.hints.label}" id="ol4"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" id="gc14">
+                            <af:selectOneChoice value="#{bindings.Sex1.inputValue}" label="#{bindings.Sex1.label}"
+                                                required="#{bindings.Sex1.hints.mandatory}" simple="true" disabled="true"
+                                                shortDesc="#{bindings.Sex1.hints.tooltip}" id="soc1">
+                                <f:selectItems value="#{bindings.Sex1.items}" id="si1"/>
+                                <f:validator binding="#{bindings.Sex1.validator}"/>
+                            </af:selectOneChoice>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="5%" id="gc15" halign="end">
+                            <af:outputLabel value="#{bindings.Country.hints.label}" id="ol9"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc16">
+                            <af:selectOneChoice value="#{bindings.Country1.inputValue}"
+                                                label="#{bindings.Country1.label}" simple="true"
+                                                required="#{bindings.Country1.hints.mandatory}" disabled="true"
+                                                shortDesc="#{bindings.Country1.hints.tooltip}" id="soc4">
+                                <f:selectItems value="#{bindings.Country1.items}" id="si4"/>
+                                <f:validator binding="#{bindings.Country1.validator}"/>
+                            </af:selectOneChoice>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                        <af:gridCell marginStart="5px" width="5%" id="gc17" halign="end">
+                            <af:outputLabel value="#{bindings.Age.hints.label}" id="ol5"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="10%" id="gc18">
+                            <af:inputText value="#{bindings.Age.inputValue}" simple="true"
+                                          required="#{bindings.Age.hints.mandatory}"
+                                          columns="#{bindings.Age.hints.displayWidth}"
+                                          maximumLength="#{bindings.Age.hints.precision}" disabled="true"
+                                          shortDesc="#{bindings.Age.hints.tooltip}" id="it3">
+                                <f:validator binding="#{bindings.Age.validator}"/>
+                            </af:inputText>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="5%" id="gc19" halign="end">
+                            <af:outputLabel value="#{bindings.Doj.hints.label}" id="ol10"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc20">
+                            <af:inputDate value="#{bindings.Doj.inputValue}" required="#{bindings.Doj.hints.mandatory}"
+                                          columns="#{bindings.Doj.hints.displayWidth}" simple="true" disabled="true"
+                                          shortDesc="#{bindings.Doj.hints.tooltip}" id="id2">
+                                <f:validator binding="#{bindings.Doj.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.Doj.format}"/>
+                            </af:inputDate>
+                        </af:gridCell>
+                    </af:gridRow>
+                </af:panelGridLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
