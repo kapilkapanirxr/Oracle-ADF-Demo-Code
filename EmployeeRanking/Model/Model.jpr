@@ -117,7 +117,7 @@
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
          <hash n="EmployeeRanking_Model">
-            <value n="adflib-connectionDetails" v="false"/>
+            <value n="adflib-connectionDetails" v="true"/>
             <hash n="archiveOptions">
                <value n="hasManifest" v="true"/>
             </hash>
@@ -210,7 +210,7 @@
             <string v="+**"/>
          </list>
          <list n="url-path">
-            <url path="../../Model/src/"/>
+            <url path="src/"/>
          </list>
       </hash>
    </hash>

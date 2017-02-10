@@ -1,0 +1,12 @@
+//Groovy Scripts for model.entity.EmployeeRankEO
+
+package model.entity
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="Sno")
+def Sno_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("RANK_SEQ",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

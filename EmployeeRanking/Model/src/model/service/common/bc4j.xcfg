@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="model.service.EmployeeRankAM">
+    <AppModuleConfig name="EmployeeRankAMLocal" jbo.project="model.Model" ApplicationName="model.service.EmployeeRankAM"
+                     DeployPlatform="LOCAL" JDBCName="EmployeeRankingDS">
+      <Database jbo.TypeMapEntries="OracleApps"/>
+      <Security AppModuleJndiName="model.service.EmployeeRankAM"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="EmployeeRankAMShared" jbo.project="model.Model"
+                     ApplicationName="model.service.EmployeeRankAM" DeployPlatform="LOCAL" JDBCName="EmployeeRankingDS">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps"/>
+      <Security AppModuleJndiName="model.service.EmployeeRankAM"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>
