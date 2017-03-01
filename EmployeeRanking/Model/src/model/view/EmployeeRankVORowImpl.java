@@ -28,14 +28,14 @@ public class EmployeeRankVORowImpl extends ViewRowImpl {
      
         RowSetIterator ri = null;
         ArrayList<String> existingEmployees = new ArrayList<String>();
-           //Create secondary row set to iterator over the return reason category rows
+           //Create secondary row set to iterator over the employees
         ri =
   (this.getEmployeeRankVO()).createRowSetIterator(null);
         while (ri.hasNext()) {
             EmployeeRankVORowImpl row =
                 (EmployeeRankVORowImpl)ri.next();
             if (row != null && row.getEmployeeId() != null) {
-                //This return reason category has already been selected. Add to the list.
+                //This employee has already been selected. Add to the list.
                 existingEmployees.add(row.getEmployeeId());
             }
         }
